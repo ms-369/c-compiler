@@ -26,7 +26,7 @@ def lexical_analyzer(input_text):
             if match:
                 value = match.group(0)
                 tokens.append((token_type, value))
-                input_text = input_text[len(value):]  # Remove matched part
+                input_text = input_text[len(value):] 
                 break
         if not match:
             raise ValueError(f"LEXICAL ERROR: UNKNOWN TOKEN AT '{input_text[:10]}' ")
